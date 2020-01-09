@@ -1,0 +1,234 @@
+@CHARSET "ISO-8859-1";
+
+/* Backgrounds will cover all the section
+	* --------------------------------------- */
+.section{
+	background-size: cover;
+}
+.slide{
+	background-size: cover;
+}
+
+/* Defining each section background and styles
+* --------------------------------------- */
+#section0{
+	background-image: url('../graphics/intro.png');
+}
+
+
+
+
+/*Adding background for the slides
+* --------------------------------------- */
+#selected1{
+	background-image: url('../graphics/selected.png');
+}
+#selected2{
+	padding: 6% 0 0 0;
+}
+
+#web1{
+	background-image: url('../graphics/web.png');
+}
+
+#dsm1 {
+	background-image:url('../graphics/dsm.png');
+}
+
+#shaky1 {
+	background-image:url('../graphics/shakybutt.png');
+}
+
+#kkslider1 {
+	background-image: url('../graphics/kkslider.png');
+}
+
+#kkslider2 {
+	background-image: linear-gradient(to right, #343e72, #1d1854);
+}
+
+#mstudio1 {
+	background-image: url('../graphics/mstudio.png');
+}
+
+/*Text styles
+* --------------------------------------- */
+
+p {
+	font-family:'Roboto', monospace;
+	font-size:14px;
+}
+
+.introtext h1 {
+	font-family: 'Major Mono Display', monospace;
+	font-size:24px;
+	margin-bottom:70px;
+	text-transform: lowercase;
+}
+
+.sectionheader h1 {
+	font-family: 'Major Mono Display', monospace;
+	font-size:16px;
+	text-transform: lowercase;
+	text-align:left;
+}
+
+.sectiontitle h2 {
+	color:white;
+	font-family: 'Major Mono Display', monospace;
+	font-size:36px;
+	text-transform: lowercase;
+}
+
+.credits {
+	color:white;
+	font-family: 'Major Mono Display', monospace;
+	font-size:14px;
+	text-transform: lowercase;
+	margin-top:10px;
+}
+
+
+/*Hyperlink styles
+* --------------------------------------- */
+a {
+	color:white;
+	text-decoration:none;
+}
+
+a:hover {
+	font-weight:bold;
+}
+
+a:visited { 
+	color:white;
+}
+
+/*Sidebar & Side Menu styles
+* --------------------------------------- */
+
+#sidebar {
+	width:100px;
+	height:100%;
+	overflow:hidden;
+	background-color:#1d1854;
+	border-right: 7px solid #8d2999;
+	z-index:1;
+	float:left;
+	position:relative;
+	padding-top:20%;
+}
+
+#fullpage { 
+	height:100%;
+	width:auto;
+	margin-left:100px;
+}
+
+#logo {
+	width: 70px;
+	float:right;
+	margin: 15px;
+}
+
+
+.intro {
+	margin: 0 auto;
+	text-align:left;
+	padding:50px 20px;
+	opacity:1;
+}
+
+.introtext {
+	position:absolute;
+	bottom:10%;
+	width:100%;
+}
+
+.downarrow {
+	margin-top:20px;
+	width:40px;
+}
+
+.sectionheader {
+	width:50%;
+	position:absolute;
+	top:5%;
+}
+
+
+.sectionheader hr {
+	float:left;
+	width:75%;
+	text-decoration:none;
+	border:1px solid white;
+}
+
+.sectiontitle {
+	position:absolute;
+	bottom:2%;
+	width:700px;
+}
+
+/*----- KK Slider Page ------- */
+
+.kkContainer {
+	position:static;
+	width:80%;
+	margin:10% auto;
+}
+
+.kkLeft {
+	float:left;
+	width:300px;
+	height:auto;
+	text-align:left;
+	z-index:1000000;
+	position:static;
+	padding-left:30px;
+	
+}
+
+.kkLeft img {
+	width: 250px;
+	height: auto;
+	margin-bottom:20px;
+	border:3px solid white;
+}
+
+.kkLeft iframe {
+	margin:0px auto;
+}
+
+.kkText {
+	width:35%;
+	margin:0px auto;
+	height:auto;
+	float:left;
+	color:white;
+	text-align:left;
+	border-left: 2px solid white;
+	border-right: 2px solid white;
+	padding:0px 30px;
+}
+
+.kkText p {
+	font-family:'Roboto', monospace;
+	font-size:14px;
+	margin-bottom:10px;
+	line-height:1.6;
+}
+
+.kkRight {
+	text-align:right;
+	float:right;
+	width:300px;
+	margin-left:30px;
+}
+
+.embedPlaylist {
+	width:300px;
+	height:380px;
+	z-index:1000000;
+	position:static;
+}

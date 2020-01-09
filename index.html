@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Jay Andromeda</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/andromeda.css" />
+	<link rel="stylesheet" type="text/css" href="css/sidenav.css" />
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto:300&display=swap" rel="stylesheet"> 
+	
+	<!-- a helper script for vaidating the form-->
+	<script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
+	
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Overwriting styles for control arrows for slides
+	* --------------------------------------- */
+	.controlArrow.prev {
+		left: 50px;
+	}
+	.controlArrow.next{
+		right: 50px;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+	<div class="sideClose">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	</div>
+	<img src="graphics/logoFull.png" id="logoFull" />
+	<div class="sideTitles">
+		<ul>
+			<li><a href="#" onclick="showAbout()">About</a></li> 
+			<li><a href="#" onclick="showSkills()">Skills</a></li>
+			<li><a href="#" onclick="showContact()">Contact</a></li>
+		</ul>
+		<hr class="menuLine" /> 
+	</div>
+	<div class="sideDescription" id="about">
+		<p>About information goes here
+		</p>
+	</div>
+	<div class="sideDescription" id="skills">
+		<ul class="skillList">
+			<li>Mac OS and Windows Proficient</li>
+			<li>Adobe Creative Suite</li>
+			<li>HTML/CSS</li>
+			<li>UI Design</li>
+			<li>Character Design</li>
+			<li>2D Animation</li>
+			<li>Songwriting</li>
+			<li>Video Editing</li>
+		</ul>
+	</div>
+	<div class="sideDescription" id="contact">
+		<form method="post" name="myemailform" action="form-to-email.php">
+	<p>
+		<label for='name'>Enter Name: </label><br>
+		<input type="text" name="name">
+	</p>
+	<p>
+		<label for='email'>Enter Email Address:</label><br>
+		<input type="text" name="email">
+	</p>
+	<p>
+		<label for='message'>Enter Message:</label> <br>
+		<textarea name="message"></textarea>
+	</p>
+	<input type="submit" name='submit' value="submit">
+</form>
+	</div>
+</div>
+<div id="sidebar">
+	<img class="menu" id="logo" onclick="openNav()" src="graphics/logo.png" />
+</div>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<div class="introtext">
+				<p>Hi, I'm Jay. I do a lot of things. Some of them include:</p>
+				<h1>Design | Music | Writing | Art</h1>
+				<p>Scroll down to see my work.</p>
+				<a href="#section1">
+					<img class="downarrow" src="graphics/down.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+	    <div class="slide" id="selected1">
+			<div class="intro">
+				<div class="sectionheader">
+					<h1>Illustration | Character Design</h1>
+					<hr />
+				</div>
+				<div class="sectiontitle">
+					<p>
+						a collection of illustrative and character design work from a variety of past projects.
+					</p>
+					<h2>
+					<a href="#selectedWorks/1">
+						Selected Works >>
+						</a>
+					</h2> 
+					
+				</div>
+			</div>
+		</div>
+
+	    <div class="slide" id="selected2">
+			<h1>Slide 2</h1>
+			<p>
+				<a href="#selectedWorks/0">Back</a>
+			</p>
+		</div>
+
+	</div>
+	<div class="section" id="section2">
+	    <div class="slide" id="web1">
+			<div class="intro">
+				<div class="sectionheader">
+					<h1>Web Design</h1>
+					<hr />
+				</div>
+				<div class="sectiontitle">
+					<p>
+						a collection of web design projects, both personal and commercial.
+					</p>
+					<h2>
+					<a href="#webProjects/1">
+						Web Projects >>
+						</a>
+					</h2> 
+					
+				</div>
+			</div>
+		</div>
+
+	    <div class="slide" id="web2">
+			<h1>Slide 2</h1>
+			<p>
+				<a href="#webProjects/0">Back</a>
+			</p>
+		</div>
+
+	</div>
+	
+	<div class="section" id="section4">
+	    <div class="slide" id="shaky1">
+			<div class="intro">
+				<div class="sectionheader">
+					<h1>Game Design | Animation | Music | Writing</h1>
+					<hr />
+				</div>
+				<div class="sectiontitle">
+					<p>
+						a visual novel / rhythm game featuring lgbtq+ representation, aliens, and twerking.
+					</p>
+					<h2>
+					<a href="#shakyButt/1">
+						Shaky Butt >>
+						</a>
+					</h2> 
+					
+				</div>
+			</div>
+		</div>
+
+	    <div class="slide" id="shaky2">
+			<h1>Slide 2</h1>
+			<p>
+				<a href="#shakyButt/0">Back</a>
+			</p>
+		</div>
+
+	</div>
+	<div class="section" id="section4">
+	    <div class="slide" id="mstudio1">
+			<div class="intro">
+				<div class="sectionheader">
+					<h1>UI Design</h1>
+					<hr />
+				</div>
+				<div class="sectiontitle">
+					<p>
+						taking a kid-friendly design approach for a music education application.
+					</p>
+					<h2>
+					<a href="#mStudio/1">
+						M:Studio >>
+						</a>
+					</h2> 
+					
+				</div>
+			</div>
+		</div>
+
+	    <div class="slide" id="mstudio2">
+			<h1>Slide 2</h1>
+			<p>
+				<a href="#mStudio/0">Back</a>
+			</p>
+		</div>
+
+	</div>
+	<div class="section" id="section5">
+	    <div class="slide" id="kkslider1">
+			<div class="intro">
+				<div class="sectionheader">
+					<h1>Music</h1>
+					<hr />
+				</div>
+				<div class="sectiontitle">
+					<p>
+						bringing a beloved video game franchise to life with original english lyrics and custom instrumentals.
+					</p>
+					<h2>
+					<a href="#animalCrossing/1">
+						K.K. Slider Covers >>
+						</a>
+					</h2> 
+					
+				</div>
+			</div>
+		</div>
+
+	    <div class="slide" id="kkslider2">
+			<div class="kkContainer">
+				<div class="sectionheader">
+						
+					<h1>
+						<a href="#animalCrossing/0"> << 
+						The K.K. Slider Cover Project</h1></a>
+					<hr />
+				</div>
+				<div class="kkLeft">
+					<img src="imgs/kk.jpg" alt="The K.K. Slider Cover Project Album Cover" />
+					<iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:0nW26LUbhcEfdvtMFg3D3w?si=qS-3WFc1RmuibxJNiA2eQQ&size=detail&theme=dark" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+				</div>
+				<div class="kkText">
+					<p>Animal Crossing, a beloved game series from Nintendo, has been a largely influential game for me since I was first introduced 
+					to the series while studying design in university. The music, composed by Kazumi Totaka, is beloved by fans, especially that 
+					attributed to the charming guitar-plucking dog, K.K. Slider. Every week, the player can  view a live performance of an original 
+					K.K. song, then take home a CD to play in their own in-game home.
+					</p>
+					<p>As an avid fan of the Animal Crossing franchise and its music, I found the one disappointing aspect of K.K. Slider was 
+					the lack of lyrics to his 90-odd original songs, performed every week in the game. Thus, the concept for the K.K. Slider 
+					Cover Project was born in 2014. After meeting Rekcahdam in 2015, he agreed to collaborate with me by producing 
+					all-new instrumental tracks for my original lyrics.
+					</p>
+					<p>At its height, Rekcahdam and I were writing, recording, and producing one song per week. Over the course of 2015-2016, 
+					we released 19 completed songs with accompanying YouTube videos. The album was released in January of 2016, when Rekcahdam 
+					and I performed "K.K. Cruisin'" as part of our set at MAGFest 2016. The album is available on Spotify, YouTube, BandCamp,
+					iTunes and more.
+					</p>
+				</div>
+				
+				<div class="kkRight">
+					
+						<iframe src="https://open.spotify.com/embed/album/3TjI9c6SQOrgRcti2vT0eT" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						<!--<iframe style="border: 0; width: 300px; height: 380px;" src="https://bandcamp.com/EmbeddedPlayer/album=285824548/size=large/bgcol=333333/linkcol=9a64ff/artwork=small/transparent=true/" seamless><a href="http://jayandromeda.bandcamp.com/album/the-kk-slider-cover-project-volume-1">The KK Slider Cover Project, Volume 1 by Jay Andromeda and Rekcahdam</a></iframe>
+					-->
+					<p class="credits">Composer: Kazumi Totaka
+					</p>
+					<p class="credits">Lyrics: Jay Andromeda
+					</p>
+					<p class="credits">Producer: Rekcahdam
+					</p>
+					<p class="credits">Release Date: Jan 2016
+					</p>
+					
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script src="js/sidemenu.js"></script>
+
+<script language="JavaScript">
+// Code for validating the form
+// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+// for details
+var frmvalidator  = new Validator("myemailform");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+</script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['home', 'selectedWorks', 'webProjects', 'shakyButt', 'mStudio', 'animalCrossing'],
+        sectionsColor: ['#1d1854', '#1d1854', '#1d1854', '#1d1854', '#1d1854', '#1d1854'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Welcome', 'Selected Works', 'Web Projects', 'Shaky Butt', 'M:Studio', 'K.K. Slider Covers']
+    });
+</script>
+
+</body>
+</html>
