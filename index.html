@@ -5,10 +5,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Jay Andromeda</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
-	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="description" content="Portfolio site for Jay Andromeda" />
+	<meta name="keywords"  content="portfolio, jay, andromeda, design, web, writing, art, illustration, designer" />
 	<meta name="Resource-type" content="Document" />
 
+	<link rel="shortcut icon" href="graphics/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="graphics/favicon.ico" type="image/x-icon">
 
 	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
 	<link rel="stylesheet" type="text/css" href="css/examples.css" />
@@ -187,6 +189,44 @@
 
 	</div>
 	
+	<div class="section" id="section3">
+	    <div class="slide" id="animate1">
+			<div class="intro">
+				<div class="sectionheader">
+					<h1>Animation</h1>
+					<hr />
+				</div>
+				<div class="sectiontitle">
+					<p>
+						a selection of 2D animation projects from recent years.
+					</p>
+					<h2>
+					<a href="#animation/1">
+						Animation Work >>
+						</a>
+					</h2> 
+					
+				</div>
+			</div>
+		</div>
+
+	    <div class="slide" id="animate2">
+			<div class="animationContainer">
+				<div class="sectionheader">		
+					<h1>
+						<a href="#animation/0"> << Animation Work</h1></a>
+					<hr />
+				</div>
+				<iframe src="https://player.vimeo.com/video/384057399" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+				<p>
+					<a href="#animation/0">Back</a>
+				</p>
+			</div>
+		</div>
+
+	</div>
+	
 	<div class="section" id="section4">
 	    <div class="slide" id="shaky1">
 			<div class="intro">
@@ -334,11 +374,11 @@ frmvalidator.addValidation("email","email","Please enter a valid email address")
 
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        anchors: ['home', 'selectedWorks', 'webProjects', 'shakyButt', 'mStudio', 'animalCrossing'],
-        sectionsColor: ['#1d1854', '#1d1854', '#1d1854', '#1d1854', '#1d1854', '#1d1854'],
+        anchors: ['home', 'selectedWorks', 'webProjects', 'animation', 'shakyButt', 'mStudio', 'animalCrossing'],
+        sectionsColor: ['#1d1854', '#1d1854', '#1d1854', '#1d1854', '#1d1854', '#1d1854', '#1d1854'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Welcome', 'Selected Works', 'Web Projects', 'Shaky Butt', 'M:Studio', 'K.K. Slider Covers']
+        navigationTooltips: ['Welcome', 'Selected Works', 'Web Projects', 'Animation', 'Shaky Butt', 'M:Studio', 'K.K. Slider Covers']
     });
 </script>
 

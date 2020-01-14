@@ -22,6 +22,8 @@
 * --------------------------------------- */
 #selected1{
 	background-image: url('../graphics/selected.png');
+	background-size:auto 100%;
+	background-position:center;
 }
 #selected2{
 	padding: 6% 0 0 0;
@@ -29,18 +31,29 @@
 
 #web1{
 	background-image: url('../graphics/web.png');
+	background-size:auto 100%;
+	background-position:center;
 }
 
-#dsm1 {
-	background-image:url('../graphics/dsm.png');
+#animate1{
+	background-image: url('../graphics/animation.png');
+	background-size:auto 100%;
+}
+
+#animate2 {
+	background-image: linear-gradient(to right, #343e72, #1d1854);
 }
 
 #shaky1 {
 	background-image:url('../graphics/shakybutt.png');
+	background-size:auto 100%;
+	background-position:center;
 }
 
 #kkslider1 {
 	background-image: url('../graphics/kkslider.png');
+	background-size:auto 100%;
+	background-position:center;
 }
 
 #kkslider2 {
@@ -49,6 +62,8 @@
 
 #mstudio1 {
 	background-image: url('../graphics/mstudio.png');
+	background-size:auto 100%;
+	background-position:center;
 }
 
 /*Text styles
@@ -154,6 +169,7 @@ a:visited {
 	width:50%;
 	position:absolute;
 	top:5%;
+	float:left;
 }
 
 
@@ -170,12 +186,22 @@ a:visited {
 	width:700px;
 }
 
+/* ---- Animation page ------ */
+
+.animationContainer{
+	position:static;
+	width:100%;
+	margin:10% auto;
+	padding:10% 0px;
+}
+
 /*----- KK Slider Page ------- */
 
 .kkContainer {
 	position:static;
-	width:80%;
+	width:100%;
 	margin:10% auto;
+	padding:10% 0px;
 }
 
 .kkLeft {
